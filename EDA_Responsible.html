@@ -11297,6 +11297,13 @@ Successfully installed ucimlrepo-0.0.7
 <div class="jp-OutputArea-child">
 <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
 <div class="jp-RenderedText jp-OutputArea-output" data-mime-type="application/vnd.jupyter.stderr" tabindex="0">
+<pre>/tmp/ipython-input-163273936.py:2: SettingWithCopyWarning: 
+A value is trying to be set on a copy of a slice from a DataFrame.
+Try using .loc[row_indexer,col_indexer] = value instead
+
+See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
+  X['workclass'] = X['workclass'].replace('?', pd.NA)
+</pre>
 </div>
 </div>
 <div class="jp-OutputArea-child">
@@ -11728,6 +11735,13 @@ Successfully installed ucimlrepo-0.0.7
 <div class="jp-OutputArea-child">
 <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
 <div class="jp-RenderedText jp-OutputArea-output" data-mime-type="application/vnd.jupyter.stderr" tabindex="0">
+<pre>/tmp/ipython-input-163273936.py:8: SettingWithCopyWarning: 
+A value is trying to be set on a copy of a slice from a DataFrame.
+Try using .loc[row_indexer,col_indexer] = value instead
+
+See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
+  X['occupation'] = X['occupation'].replace('?', pd.NA)
+</pre>
 </div>
 </div>
 <div class="jp-OutputArea-child">
@@ -12159,6 +12173,13 @@ Successfully installed ucimlrepo-0.0.7
 <div class="jp-OutputArea-child">
 <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
 <div class="jp-RenderedText jp-OutputArea-output" data-mime-type="application/vnd.jupyter.stderr" tabindex="0">
+<pre>/tmp/ipython-input-163273936.py:14: SettingWithCopyWarning: 
+A value is trying to be set on a copy of a slice from a DataFrame.
+Try using .loc[row_indexer,col_indexer] = value instead
+
+See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
+  X['native-country'] = X['native-country'].replace('?', pd.NA)
+</pre>
 </div>
 </div>
 <div class="jp-OutputArea-child">
@@ -12649,6 +12670,21 @@ Successfully installed ucimlrepo-0.0.7
 <div class="jp-OutputArea-child">
 <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
 <div class="jp-RenderedText jp-OutputArea-output" data-mime-type="application/vnd.jupyter.stderr" tabindex="0">
+<pre>/tmp/ipython-input-1822193679.py:1: FutureWarning: A value is trying to be set on a copy of a DataFrame or Series through chained assignment using an inplace method.
+The behavior will change in pandas 3.0. This inplace method will never work because the intermediate object on which we are setting values always behaves as a copy.
+
+For example, when doing 'df[col].method(value, inplace=True)', try using 'df.method({col: value}, inplace=True)' or df[col] = df[col].method(value) instead, to perform the operation inplace on the original object.
+
+
+  y['income'].replace({'&lt;=50K': 0, '&gt;50K': 1, '&lt;=50K.': 0, '&gt;50K.':1}, inplace=True)
+/tmp/ipython-input-1822193679.py:1: FutureWarning: Downcasting behavior in `replace` is deprecated and will be removed in a future version. To retain the old behavior, explicitly call `result.infer_objects(copy=False)`. To opt-in to the future behavior, set `pd.set_option('future.no_silent_downcasting', True)`
+  y['income'].replace({'&lt;=50K': 0, '&gt;50K': 1, '&lt;=50K.': 0, '&gt;50K.':1}, inplace=True)
+/tmp/ipython-input-1822193679.py:1: SettingWithCopyWarning: 
+A value is trying to be set on a copy of a slice from a DataFrame
+
+See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
+  y['income'].replace({'&lt;=50K': 0, '&gt;50K': 1, '&lt;=50K.': 0, '&gt;50K.':1}, inplace=True)
+</pre>
 </div>
 </div>
 </div>
@@ -12991,9 +13027,9 @@ Successfully installed ucimlrepo-0.0.7
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<h3 id="Distribuci%C3%B3n-de-variables-categ%C3%B3ricas">Distribución de variables categóricas<a class="anchor-link" href="#Distribuci%C3%B3n-de-variables-categ%C3%B3ricas">¶</a></h3><p>En esta celda <strong>se graficó</strong> la frecuencia de cada categoría (ya con los <strong>NaN y valores faltantes eliminados</strong> en pasos previos). <strong>Se observa</strong> un claro predominio de <code>Private</code> en <em>workclass</em>; en <em>education</em> <strong>se concentran</strong> <code>HS-grad</code>, <code>Some-college</code> y <code>Bachelors</code>; en <em>marital-status</em> <strong>destaca</strong> <code>Married-civ-spouse</code>; en <em>occupation</em> <strong>aparecen</strong> más <code>Craft-repair</code>, <code>Prof-specialty</code> y <code>Exec-managerial</code>; en <em>relationship</em> <strong>prevalece</strong> <code>Husband</code>; en <em>race</em> <strong>predomina</strong> <code>White</code>; en <em>sex</em> <strong>se ve</strong> mayor presencia de <code>Male</code>; y en <em>native-country</em> <strong>domina</strong> ampliamente <code>United-States</code>, con una cola larga de países poco frecuentes.</p>
+<h3 id="Distribuci%C3%B3n-de-variables-categ%C3%B3ricas">Distribución de variables categóricas<a class="anchor-link" href="#Distribuci%C3%B3n-de-variables-categ%C3%B3ricas">¶</a></h3><p>En esta celda <strong>se graficó</strong> la frecuencia de cada categoría (ya con los <strong>NaN y valores faltantes eliminados</strong> en pasos previos). <strong>Se observa</strong> un claro predominio de <code>Private</code> en <em>workclass</em>; en <em>education</em> <strong>se concentran</strong> <code>HS-grad</code>, <code>Some-college</code> y <code>Bachelors</code>; en <em>marital-status</em> <strong>destaca</strong> <code>Married-civ-spouse</code>; en <em>occupation</em> <strong>aparecen</strong> más <code>Craft-repair</code>, <code>Prof-specialty</code> y <code>Exec-managerial</code>; en <em>relationship</em> <strong>prevalece</strong> <code>Husband</code>; en <em>race</em> <strong>predomina</strong> <code>White</code>; en <em>sex</em> <strong>se ve</strong> mayor presencia de <code>Male</code>; y en <em>native-country</em> <strong>domina</strong> <code>United-States</code>, con una cola larga de países poco frecuentes.</p>
 <p><strong>Consecuencias para la confiabilidad del modelo.</strong>
-La fuerte asimetría de estas distribuciones implica que el modelo <strong>tiende</strong> a aprender mejor los patrones del <strong>grupo mayoritario</strong>, mientras que en categorías minoritarias sus predicciones pueden resultar <strong>inestables</strong> y con <strong>errores desbalanceados</strong> (p. ej., más falsos positivos o negativos según el subgrupo). Las categorías muy raras —sobre todo en <em>native-country</em> y algunas <em>occupations</em>— <strong>elevan la varianza</strong>: pequeñas variaciones de datos cambian notablemente la salida para esos casos. La co-ocurrencia de etiquetas como <code>Husband</code> con <em>sex</em> y <em>marital-status</em> <strong>introduce</strong> posibles <strong>proxies</strong> de atributos sensibles, por lo que el modelo <strong>podría</strong> capturar asociaciones espurias con <code>income</code>. Además, aunque ya no hay faltantes, el hecho de <strong>haber eliminado registros incompletos</strong> condiciona el conjunto final a quienes tenían información completa; si la ausencia no era aleatoria, el dataset resultante <strong>pierde representatividad</strong> de ciertos perfiles (p. ej., algunos <em>workclass</em> o <em>countries</em>), lo que <strong>reduce la generalización</strong> y <strong>distorsiona</strong> la calibración de probabilidades en esos subgrupos. En síntesis, un buen desempeño promedio puede <strong>ocultar heterogeneidad de error</strong> relevante entre grupos.</p>
+La fuerte asimetría de estas distribuciones implica que el modelo <strong>tiende</strong> a aprender mejor los patrones del <strong>grupo mayoritario</strong>, mientras que en categorías minoritarias sus predicciones pueden resultar <strong>inestables</strong> y con <strong>errores desbalanceados</strong> (por ejemplo, más falsos positivos o negativos según el subgrupo). Las categorías muy raras, sobre todo en <em>native-country</em> y algunas <em>occupations</em>, <strong>elevan la varianza</strong>: pequeñas variaciones de datos cambian notablemente la salida para esos casos. La co-ocurrencia de etiquetas como <code>Husband</code> con <em>sex</em> y <em>marital-status</em> <strong>introduce</strong> posibles <strong>proxies</strong> de atributos sensibles, por lo que el modelo <strong>podría</strong> capturar asociaciones espurias con <code>income</code>. Además, aunque ya no hay faltantes, el hecho de <strong>haber eliminado registros incompletos</strong> condiciona el conjunto final a quienes tenían información completa; si la ausencia no era aleatoria, el dataset resultante <strong>pierde representatividad</strong> de ciertos perfiles (por ejemplo, algunos <em>workclass</em> o <em>countries</em>), lo que <strong>reduce la generalización</strong> y <strong>distorsiona</strong> la calibración de probabilidades en esos subgrupos. En síntesis, un buen desempeño promedio puede <strong>ocultar heterogeneidad de error</strong> relevante entre grupos.</p>
 </div>
 </div>
 </div>
@@ -13064,9 +13100,9 @@ La fuerte asimetría de estas distribuciones implica que el modelo <strong>tiend
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<h3 id="Distribuci%C3%B3n-de-variables-num%C3%A9ricas">Distribución de variables numéricas<a class="anchor-link" href="#Distribuci%C3%B3n-de-variables-num%C3%A9ricas">¶</a></h3><p>En esta celda <strong>se graficaron</strong> histogramas con densidades para las variables numéricas (ya sin valores faltantes). <strong>Se observa</strong> que <code>education-num</code> es discreta y <strong>presenta</strong> varios picos entre 8 y 13, reflejando niveles educativos frecuentes. <code>fnlwgt</code> <strong>muestra</strong> una asimetría marcada a la derecha (cola larga), típica de un peso muestral. <code>hours-per-week</code> <strong>se concentra</strong> fuertemente cerca de 40 horas con una cola hacia valores altos. <code>age</code> <strong>aparece</strong> aproximadamente unimodal —con mayor densidad en la franja de 30–45 años— y colas moderadas. En <code>capital-gain</code> y <code>capital-loss</code> <strong>predomina</strong> el cero (masivo “pico” en 0) con <strong>pocos</strong> valores grandes aislados, lo que configura una distribución <strong>cero-inflada</strong> con outliers.</p>
+<h3 id="Distribuci%C3%B3n-de-variables-num%C3%A9ricas">Distribución de variables numéricas<a class="anchor-link" href="#Distribuci%C3%B3n-de-variables-num%C3%A9ricas">¶</a></h3><p>En esta celda <strong>se graficaron</strong> histogramas con densidades para las variables numéricas (ya sin valores faltantes). <strong>Se observa</strong> que <code>education-num</code> es discreta y <strong>presenta</strong> varios picos entre 8 y 13, reflejando niveles educativos frecuentes. <code>fnlwgt</code> <strong>muestra</strong> una asimetría marcada a la derecha (cola larga), típica de un peso muestral. <code>hours-per-week</code> <strong>se concentra</strong> fuertemente cerca de 40 horas con una cola hacia valores altos. <code>age</code> <strong>aparece</strong> aproximadamente unimodal, con mayor densidad en la franja de 30–45 años y con colas moderadas. En <code>capital-gain</code> y <code>capital-loss</code> <strong>predomina</strong> el cero con <strong>pocos</strong> valores grandes aislados, lo que configura una distribución <strong>cero-inflada</strong> con outliers.</p>
 <p><strong>Consecuencias para la confiabilidad del modelo.</strong>
-Estas formas distributivas afectan cómo un algoritmo aprende y qué tan estables son sus predicciones. La <strong>cero-inflación</strong> en <code>capital-gain</code> y <code>capital-loss</code> puede hacer que el modelo funcione casi como un detector binario de “tiene/no tiene” ganancia o pérdida de capital: si esa señal es rara y muy informativa, las predicciones <strong>tienden</strong> a volverse frágiles fuera del patrón del conjunto —basta un valor atípico para cambiar drásticamente la salida— y la <strong>calibración</strong> de probabilidades puede degradarse, sobre todo en los casos con cero. Los <strong>outliers</strong> (p. ej., ganancias de capital muy altas) <strong>influyen</strong> desproporcionadamente en modelos sensibles a la escala o a la varianza y <strong>distorsionan</strong> fronteras de decisión o coeficientes, generando errores impredecibles en ejemplos poco comunes. La fuerte <strong>concentración</strong> de <code>hours-per-week</code> alrededor de 40 implica que pequeñas diferencias numéricas aportan poca señal real; el modelo <strong>puede</strong> sobreinterpretar ruido en ese rango y luego fallar cuando encuentra jornadas atípicas. En <code>education-num</code>, al ser una variable ordinal con saltos discretos, tratarla como magnitud estrictamente continua <strong>induce</strong> la idea de que “pasar de 9 a 10” vale lo mismo que “pasar de 13 a 14”, lo cual <strong>puede</strong> introducir relaciones espurias con <code>income</code>. Finalmente, usar <code>fnlwgt</code> como predictor en lugar de reconocerlo como peso de diseño <strong>mezcla</strong> el proceso de muestreo con el fenómeno a predecir: el modelo <strong>aprende</strong> patrones del levantamiento de datos y su desempeño <strong>pierde</strong> confiabilidad al aplicarse en poblaciones o contextos distintos del survey original. En conjunto, estas características sugieren que un buen promedio global <strong>puede ocultar</strong> variabilidad de error y decisiones inestables en regiones raras del espacio numérico.</p>
+Estas formas distributivas afectan cómo un algoritmo aprende y qué tan estables son sus predicciones. La <strong>cero-inflación</strong> en <code>capital-gain</code> y <code>capital-loss</code> puede hacer que el modelo funcione casi como un detector binario de “tiene/no tiene” ganancia o pérdida de capital, por lo que, si esa señal es rara y muy informativa, las predicciones <strong>tienden</strong> a volverse frágiles fuera del patrón del conjunto. Basta un valor atípico para cambiar drásticamente la salida, y la <strong>calibración</strong> de probabilidades puede degradarse, sobre todo en los casos con cero. Los <strong>outliers</strong> (por ejemplo, ganancias de capital muy altas) <strong>influyen</strong> desproporcionadamente en modelos sensibles a la escala o a la varianza y <strong>distorsionan</strong> fronteras de decisión o coeficientes, generando errores impredecibles en ejemplos poco comunes. La fuerte <strong>concentración</strong> de <code>hours-per-week</code> alrededor de 40 implica que pequeñas diferencias numéricas aportan poca señal real, ya que el modelo <strong>puede</strong> sobreinterpretar ruido en ese rango y luego fallar cuando encuentra jornadas atípicas. En <code>education-num</code>, al ser una variable ordinal con saltos discretos, tratarla como magnitud estrictamente contínua <strong>induce</strong> la idea de que “pasar de 9 a 10” vale lo mismo que “pasar de 13 a 14”, lo cual <strong>puede</strong> introducir relaciones incorrectas con <code>income</code>. Finalmente, usar <code>fnlwgt</code> como predictor en lugar de reconocerlo como peso de diseño <strong>mezcla</strong> el proceso de muestreo con el fenómeno a predecir, donde el modelo <strong>aprende</strong> patrones del levantamiento de datos y su desempeño <strong>pierde</strong> confiabilidad al aplicarse en poblaciones o contextos distintos del survey original. En conjunto, estas características sugieren que un buen promedio global <strong>puede ocultar</strong> variabilidad de error y decisiones inestables en regiones raras del espacio numérico.</p>
 </div>
 </div>
 </div>
@@ -13171,9 +13207,9 @@ Estas formas distributivas afectan cómo un algoritmo aprende y qué tan estable
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<h3 id="Distribuci%C3%B3n-de-la-variable-objetivo">Distribución de la variable objetivo<a class="anchor-link" href="#Distribuci%C3%B3n-de-la-variable-objetivo">¶</a></h3><p>En esta celda <strong>se graficó</strong> la distribución de <code>y</code>, donde <strong>0</strong> representa ingresos <code>&lt;= 50K</code> USD/año y <strong>1</strong> ingresos <code>&gt; 50K</code>. <strong>Se observa</strong> un claro desbalance: la clase 0 <strong>concentra</strong> la mayoría de los casos y la clase 1 es minoritaria (aprox. relación cercana a <strong>3:1</strong> según el conteo visual). Esta proporción fija el <strong>riesgo base</strong> del problema: un clasificador que siempre predijera 0 ya alcanzaría una precisión alta “de referencia”.</p>
+<h3 id="Distribuci%C3%B3n-de-la-variable-objetivo">Distribución de la variable objetivo<a class="anchor-link" href="#Distribuci%C3%B3n-de-la-variable-objetivo">¶</a></h3><p>En esta celda <strong>se graficó</strong> la distribución de <code>y</code>, donde <strong>0</strong> representa ingresos <code>&lt;= 50K</code> USD/año y <strong>1</strong> ingresos <code>&gt; 50K</code>. <strong>Se observa</strong> un claro desbalance, donde la clase 0 <strong>concentra</strong> la mayoría de los casos y la clase 1 es minoritaria (aprox. relación cercana a <strong>3:1</strong> según el conteo visual). Esta proporción fija el <strong>riesgo base</strong> del problema: un clasificador que siempre predijera 0 ya alcanzaría una precisión alta “de referencia”.</p>
 <p><strong>Consecuencias para la confiabilidad del modelo.</strong>
-Con esta asimetría, el entrenamiento <strong>tiende</strong> a favorecer la clase mayoritaria y el umbral de decisión se <strong>desplaza</strong> hacia predecir 0; como resultado, el <strong>recall</strong> de la clase 1 suele <strong>degradarse</strong> y el modelo <strong>pierde</strong> sensibilidad justo donde más interesa (casos <code>&gt; 50K</code>). La precisión promedio puede <strong>resultar engañosa</strong>: es posible obtener métricas globales altas aun con bajo desempeño en la clase minoritaria. Además, las probabilidades de salida para la clase 1 suelen quedar <strong>subestimadas</strong> (problemas de <strong>calibración</strong>), y la <strong>varianza</strong> de los errores crece en esa subpoblación, volviendo las predicciones <strong>inestables</strong> en los márgenes. Si la pertenencia a la clase 1 <strong>correlaciona</strong> con ciertos atributos (p. ej., educación, ocupación, sexo, raza o país), los errores <strong>no</strong> se distribuyen de forma uniforme: se <strong>acentúan</strong> en perfiles menos representados, lo que afecta la <strong>equidad</strong> y la <strong>confiabilidad</strong> del sistema fuera del patrón dominante del dataset.</p>
+Con esta asimetría, el entrenamiento <strong>tiende</strong> a favorecer la clase mayoritaria y el umbral de decisión se <strong>desplaza</strong> hacia predecir 0; como resultado, el <strong>recall</strong> de la clase 1 suele <strong>degradarse</strong> y el modelo <strong>pierde</strong> sensibilidad justo donde más interesa (casos <code>&gt; 50K</code>). La precisión promedio puede <strong>resultar engañosa</strong>: es posible obtener métricas globales altas aun con bajo desempeño en la clase minoritaria. Además, las probabilidades de salida para la clase 1 suelen quedar <strong>subestimadas</strong> (problemas de <strong>calibración</strong>), y la <strong>varianza</strong> de los errores crece en esa subpoblación, volviendo las predicciones <strong>inestables</strong> en los márgenes. Si la pertenencia a la clase 1 <strong>correlaciona</strong> con ciertos atributos (por ejemplo, educación, ocupación, sexo, raza o país), los errores <strong>no</strong> se distribuyen de forma uniforme, ya que se <strong>acentúan</strong> en perfiles menos representados, lo que afecta la <strong>equidad</strong> y la <strong>confiabilidad</strong> del sistema fuera del patrón dominante del dataset.</p>
 </div>
 </div>
 </div>
@@ -13241,7 +13277,7 @@ Con esta asimetría, el entrenamiento <strong>tiende</strong> a favorecer la cla
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-python"><pre><span></span><span class="c1"># ─────────────────────────────────────────────────────────────────────────────</span>
-<span class="c1"># Celda util · Helpers HTML/base64 (solo si faltan)</span>
+<span class="c1"># Celda util · Helpers HTML/base64</span>
 <span class="c1"># ─────────────────────────────────────────────────────────────────────────────</span>
 <span class="k">try</span><span class="p">:</span>
     <span class="n">_fig_to_base64</span>
@@ -13511,7 +13547,7 @@ Con esta asimetría, el entrenamiento <strong>tiende</strong> a favorecer la cla
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<p>✂️ Celda 1 — Función para separar en train/valid/test (estratificado)</p>
+<p>✂️ Celda 1 — Función para separar estratificadamente en train/valid/test</p>
 </div>
 </div>
 </div>
@@ -13652,7 +13688,7 @@ Con esta asimetría, el entrenamiento <strong>tiende</strong> a favorecer la cla
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<h3 id="%F0%9F%8F%83-Celda-3-%E2%80%94-Entrenamiento-+-validaci%C3%B3n-(incluye-early-stopping-y-mejor-umbral)">🏃 Celda 3 — Entrenamiento + validación (incluye early stopping y mejor umbral)<a class="anchor-link" href="#%F0%9F%8F%83-Celda-3-%E2%80%94-Entrenamiento-+-validaci%C3%B3n-(incluye-early-stopping-y-mejor-umbral)">¶</a></h3>
+<h3 id="%F0%9F%8F%83-Celda-3-%E2%80%94-Entrenamiento-+-validaci%C3%B3n">🏃 Celda 3 — Entrenamiento + validación<a class="anchor-link" href="#%F0%9F%8F%83-Celda-3-%E2%80%94-Entrenamiento-+-validaci%C3%B3n">¶</a></h3>
 </div>
 </div>
 </div>
@@ -13733,7 +13769,7 @@ Con esta asimetría, el entrenamiento <strong>tiende</strong> a favorecer la cla
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<h3 id="%F0%9F%93%8A-Celda-4-%E2%80%94-Evaluaci%C3%B3n-en-test-+-gr%C3%A1ficas-(CM,-ROC,-PR,-Importancias)">📊 Celda 4 — Evaluación en test + gráficas (CM, ROC, PR, Importancias)<a class="anchor-link" href="#%F0%9F%93%8A-Celda-4-%E2%80%94-Evaluaci%C3%B3n-en-test-+-gr%C3%A1ficas-(CM,-ROC,-PR,-Importancias)">¶</a></h3><h4 id="Celda-4.1-%C2%B7-Gr%C3%A1fica:-Matriz-de-confusi%C3%B3n">Celda 4.1 · Gráfica: Matriz de confusión<a class="anchor-link" href="#Celda-4.1-%C2%B7-Gr%C3%A1fica:-Matriz-de-confusi%C3%B3n">¶</a></h4>
+<h3 id="%F0%9F%93%8A-Celda-4-%E2%80%94-Evaluaci%C3%B3n-en-test-y-gr%C3%A1ficas">📊 Celda 4 — Evaluación en test y gráficas<a class="anchor-link" href="#%F0%9F%93%8A-Celda-4-%E2%80%94-Evaluaci%C3%B3n-en-test-y-gr%C3%A1ficas">¶</a></h3><h4 id="Celda-4.1-%C2%B7-Gr%C3%A1fica:-Matriz-de-confusi%C3%B3n">Celda 4.1 · Gráfica: Matriz de confusión<a class="anchor-link" href="#Celda-4.1-%C2%B7-Gr%C3%A1fica:-Matriz-de-confusi%C3%B3n">¶</a></h4>
 </div>
 </div>
 </div>
@@ -14049,7 +14085,7 @@ Con esta asimetría, el entrenamiento <strong>tiende</strong> a favorecer la cla
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<h4 id="Celda-4.5-%C2%B7-Evaluaci%C3%B3n-en-test-(envuelve-y-llama-a-las-gr%C3%A1ficas)">Celda 4.5 · Evaluación en test (envuelve y llama a las gráficas)<a class="anchor-link" href="#Celda-4.5-%C2%B7-Evaluaci%C3%B3n-en-test-(envuelve-y-llama-a-las-gr%C3%A1ficas)">¶</a></h4>
+<h4 id="Celda-4.5-%C2%B7-Evaluaci%C3%B3n-en-test">Celda 4.5 · Evaluación en test<a class="anchor-link" href="#Celda-4.5-%C2%B7-Evaluaci%C3%B3n-en-test">¶</a></h4>
 </div>
 </div>
 </div>
@@ -14118,7 +14154,7 @@ Con esta asimetría, el entrenamiento <strong>tiende</strong> a favorecer la cla
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<h4 id="Celda-4.6-%C2%B7-Utilidades-para-exportar-a-HTML-(append/concatenaci%C3%B3n)">Celda 4.6 · Utilidades para exportar a HTML (append/concatenación)<a class="anchor-link" href="#Celda-4.6-%C2%B7-Utilidades-para-exportar-a-HTML-(append/concatenaci%C3%B3n)">¶</a></h4>
+<h4 id="Celda-4.6-%C2%B7-Utilidades-para-exportar-a-HTML">Celda 4.6 · Utilidades para exportar a HTML<a class="anchor-link" href="#Celda-4.6-%C2%B7-Utilidades-para-exportar-a-HTML">¶</a></h4>
 </div>
 </div>
 </div>
@@ -14244,7 +14280,7 @@ Con esta asimetría, el entrenamiento <strong>tiende</strong> a favorecer la cla
     <span class="n">dmat</span> <span class="o">=</span> <span class="n">xgb</span><span class="o">.</span><span class="n">DMatrix</span><span class="p">(</span><span class="n">X_t</span><span class="p">,</span> <span class="n">feature_names</span><span class="o">=</span><span class="n">feature_names</span><span class="p">)</span>
 
     <span class="n">booster</span> <span class="o">=</span> <span class="n">clf</span><span class="o">.</span><span class="n">get_booster</span><span class="p">()</span>
-    <span class="n">contribs</span> <span class="o">=</span> <span class="n">booster</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="n">dmat</span><span class="p">,</span> <span class="n">pred_contribs</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>  <span class="c1"># (n, n_feats + 1)  (bias al final)</span>
+    <span class="n">contribs</span> <span class="o">=</span> <span class="n">booster</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="n">dmat</span><span class="p">,</span> <span class="n">pred_contribs</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>  <span class="c1"># (n, n_feats + 1)</span>
     <span class="n">cols</span> <span class="o">=</span> <span class="n">feature_names</span> <span class="o">+</span> <span class="p">[</span><span class="s2">"__bias__"</span><span class="p">]</span>
     <span class="n">contribs_df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">contribs</span><span class="p">,</span> <span class="n">columns</span><span class="o">=</span><span class="n">cols</span><span class="p">)</span>
 
@@ -14341,7 +14377,7 @@ Con esta asimetría, el entrenamiento <strong>tiende</strong> a favorecer la cla
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<h4 id="Celda-4.8-%C2%B7-Evaluaci%C3%B3n-+-exporte-a-HTML-(se-concatena-por-modelo)">Celda 4.8 · Evaluación + exporte a HTML (se concatena por modelo)<a class="anchor-link" href="#Celda-4.8-%C2%B7-Evaluaci%C3%B3n-+-exporte-a-HTML-(se-concatena-por-modelo)">¶</a></h4>
+<h4 id="Celda-4.8-%C2%B7-Evaluaci%C3%B3n-+-exporte-a-HTML">Celda 4.8 · Evaluación + exporte a HTML<a class="anchor-link" href="#Celda-4.8-%C2%B7-Evaluaci%C3%B3n-+-exporte-a-HTML">¶</a></h4>
 </div>
 </div>
 </div>
@@ -14388,7 +14424,7 @@ Con esta asimetría, el entrenamiento <strong>tiende</strong> a favorecer la cla
     <span class="p">}</span>
     <span class="n">cls_report</span> <span class="o">=</span> <span class="n">classification_report</span><span class="p">(</span><span class="n">y_test</span><span class="p">,</span> <span class="n">preds</span><span class="p">,</span> <span class="n">digits</span><span class="o">=</span><span class="mi">4</span><span class="p">)</span>
 
-    <span class="c1"># ── 2) Figuras clásicas: CM, ROC, PR</span>
+    <span class="c1"># ── 2) CM, ROC y PR</span>
     <span class="n">cm</span> <span class="o">=</span> <span class="n">confusion_matrix</span><span class="p">(</span><span class="n">y_test</span><span class="p">,</span> <span class="n">preds</span><span class="p">)</span>
     <span class="n">fig_cm</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mf">4.5</span><span class="p">,</span> <span class="mi">4</span><span class="p">))</span>
     <span class="n">ax</span><span class="o">.</span><span class="n">imshow</span><span class="p">(</span><span class="n">cm</span><span class="p">,</span> <span class="n">interpolation</span><span class="o">=</span><span class="s2">"nearest"</span><span class="p">)</span>
@@ -14421,7 +14457,7 @@ Con esta asimetría, el entrenamiento <strong>tiende</strong> a favorecer la cla
     <span class="k">if</span> <span class="n">show_plots</span><span class="p">:</span> <span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
     <span class="n">b64_pr</span> <span class="o">=</span> <span class="n">_fig_to_base64</span><span class="p">(</span><span class="n">fig_pr</span><span class="p">)</span>
 
-    <span class="c1"># ── 3) Importancias (XGB) opcional</span>
+    <span class="c1"># ── 3) Importancias (XGB)</span>
     <span class="n">b64_imp</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">str</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span>
     <span class="n">clf</span> <span class="o">=</span> <span class="n">pipe</span><span class="o">.</span><span class="n">named_steps</span><span class="p">[</span><span class="s2">"clf"</span><span class="p">]</span>
     <span class="k">if</span> <span class="n">include_importances</span> <span class="ow">and</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">clf</span><span class="p">,</span> <span class="n">XGBClassifier</span><span class="p">):</span>
@@ -14648,13 +14684,13 @@ Test: {'accuracy': 0.864, 'precision': 0.7189, 'recall': 0.7413, 'f1': 0.7299, '
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<h2 id="Evaluaci%C3%B3n-del-modelo-(global-y-por-grupos-sensibles)">Evaluación del modelo (global y por grupos sensibles)<a class="anchor-link" href="#Evaluaci%C3%B3n-del-modelo-(global-y-por-grupos-sensibles)">¶</a></h2><h3 id="Resultados-globales"><strong>Resultados globales</strong><a class="anchor-link" href="#Resultados-globales">¶</a></h3><p>En <em>test</em> el modelo rindió <strong>accuracy 0.864</strong>, <strong>precision 0.7189</strong>, <strong>recall 0.7413</strong>, <strong>F1 0.7299</strong>, <strong>ROC-AUC 0.9259</strong> y <strong>PR-AUC 0.8251</strong>. La ROC sugiere buen poder de ordenamiento y la PR se mantiene sólida pese al desbalance. La matriz de confusión muestra <strong>650</strong> falsos positivos y <strong>580</strong> falsos negativos; cuál “pesa” más depende del uso que se le dé al sistema.</p>
-<h3 id="Evaluaci%C3%B3n-segmentada-(qu%C3%A9-se-midi%C3%B3)"><strong>Evaluación segmentada (qué se midió)</strong><a class="anchor-link" href="#Evaluaci%C3%B3n-segmentada-(qu%C3%A9-se-midi%C3%B3)">¶</a></h3><p>Para cada grupo sensible se volvieron a calcular <strong>precision</strong>, <strong>recall</strong>, <strong>F1</strong>, la <strong>tasa de verdaderos positivos</strong> (TPR/recall por grupo, o igualdad de oportunidad), la <strong>precision por grupo</strong> (paridad predictiva) y la <strong>tasa de positivos predichos</strong> (demographic parity). ¿Cómo leerlo? Si un grupo tiene <strong>TPR</strong> más bajo, el modelo <strong>se le escapan</strong> más casos verdaderamente positivos allí; si su <strong>precision</strong> cae, hay más “falsas alarmas”. Y si la proporción de positivos predichos cambia mucho entre grupos, el sistema <strong>decide distinto</strong> según quién sea la persona, incluso con señales parecidas. Las curvas ROC/PR por subgrupo ayudan a ver si el problema es de <strong>umbral</strong> o de <strong>ranking</strong> (AUC/AP).</p>
-<h3 id="Lo-que-cuentan-las-explicaciones-(contribuciones-direccionales),-visto-con-las-distribuciones"><strong>Lo que cuentan las explicaciones (contribuciones direccionales), visto con las distribuciones</strong><a class="anchor-link" href="#Lo-que-cuentan-las-explicaciones-(contribuciones-direccionales),-visto-con-las-distribuciones">¶</a></h3><p>Primero lo esencial: estas contribuciones (tipo SHAP, en <strong>log-odds</strong>) dicen
-qué tanto cada variable sube o baja el puntaje hacia <code>y=1</code> (<code>&gt; 50K</code>). Signo negativo ⇒ baja la probabilidad; positivo ⇒ sube. No es causalidad; es cómo el modelo está usando las señales que vio.</p>
+<h2 id="Evaluaci%C3%B3n-del-modelo-(global-y-por-grupos-sensibles)">Evaluación del modelo (global y por grupos sensibles)<a class="anchor-link" href="#Evaluaci%C3%B3n-del-modelo-(global-y-por-grupos-sensibles)">¶</a></h2><h3 id="Resultados-globales"><strong>Resultados globales</strong><a class="anchor-link" href="#Resultados-globales">¶</a></h3><p>En <em>test</em> el modelo rindió <strong>accuracy 0.864</strong>, <strong>precision 0.7189</strong>, <strong>recall 0.7413</strong>, <strong>F1 0.7299</strong>, <strong>ROC-AUC 0.9259</strong> y <strong>PR-AUC 0.8251</strong>. La ROC sugiere buen poder de ordenamiento y la PR se mantiene sólida pese al desbalance. La matriz de confusión muestra <strong>650</strong> falsos positivos y <strong>580</strong> falsos negativos, y cuál “pesa” más depende del uso que se le dé al sistema.</p>
+<h3 id="Evaluaci%C3%B3n-segmentada"><strong>Evaluación segmentada</strong><a class="anchor-link" href="#Evaluaci%C3%B3n-segmentada">¶</a></h3><p>Para cada grupo sensible se volvieron a calcular <strong>precision</strong>, <strong>recall</strong>, <strong>F1</strong>, la <strong>tasa de verdaderos positivos</strong>, la <strong>precision por grupo</strong> (paridad predictiva) y la <strong>tasa de positivos predichos</strong> (paridad demográfica). ¿Cómo leerlo? Si un grupo tiene <strong>TPR</strong> más bajo, el modelo <strong>se le escapan</strong> más casos verdaderamente positivos allí, por lo que, si su <strong>precision</strong> cae, hay más “falsas alarmas”. Además, si la proporción de positivos predichos cambia mucho entre grupos, el sistema <strong>decide distinto</strong> según quién sea la persona, incluso con señales parecidas. Las curvas ROC/PR por subgrupo ayudan a ver si el problema es de <strong>umbral</strong> o de <strong>ranking</strong>.</p>
+<h3 id="Lo-que-cuentan-las-explicaciones,-visto-con-las-distribuciones"><strong>Lo que cuentan las explicaciones, visto con las distribuciones</strong><a class="anchor-link" href="#Lo-que-cuentan-las-explicaciones,-visto-con-las-distribuciones">¶</a></h3><p>Primero lo esencial: estas contribuciones (tipo SHAP, en <strong>log-odds</strong>) dicen
+qué tanto cada variable sube o baja el puntaje hacia <code>y=1</code> (<code>&gt; 50K</code>). Signo negativo ⇒ baja la probabilidad, y positivo ⇒ sube. Es de esperarse, ya que es cómo el modelo está usando las señales que vio.</p>
 <p><strong>Lo que más pesa.</strong>
-Se ve clarito que <strong><code>marital-status</code></strong> es la señal dominante: mayor magnitud (≈ <strong>1.13</strong>) y efecto neto <strong>negativo</strong> (≈ <strong>-0.41</strong>). <strong><code>age</code></strong> también pesa bastante y va en la misma dirección (≈ <strong>-0.35</strong>). Luego vienen <strong><code>occupation</code></strong>, <strong><code>capital-gain</code></strong>, <strong><code>education-num</code></strong>, <strong><code>hours-per-week</code></strong> y <strong><code>relationship</code></strong>, todas con promedio <strong>negativo</strong>. La verdad, llama la atención que casi todo el “top” empuje hacia abajo: con la data desbalanceada, las combinaciones <strong>típicas</strong> del conjunto suelen ir a <code>&lt;= 50K</code>, y las que suben a <code>&gt; 50K</code> son menos frecuentes.</p>
-<p><strong>Niveles específicos (las categorías que mueven la aguja).</strong></p>
+Es claro que <strong><code>marital-status</code></strong> es la señal dominante, con mayor magnitud (≈ <strong>1.13</strong>) y efecto neto <strong>negativo</strong> (≈ <strong>-0.41</strong>). <strong><code>age</code></strong> también pesa bastante y va en la misma dirección (≈ <strong>-0.35</strong>). Luego vienen <strong><code>occupation</code></strong>, <strong><code>capital-gain</code></strong>, <strong><code>education-num</code></strong>, <strong><code>hours-per-week</code></strong> y <strong><code>relationship</code></strong>, todas con promedio <strong>negativo</strong>. Llama la atención que casi todo el “top” empuje hacia abajo, ya que con la data desbalanceada, las combinaciones <strong>típicas</strong> del conjunto suelen ir a <code>&lt;= 50K</code>, y las que suben a <code>&gt; 50K</code> son menos frecuentes.</p>
+<p><strong>Niveles específicos (las categorías que afectan la decisión).</strong></p>
 <ul>
 <li><strong><code>marital-status = Married-civ-spouse</code></strong> es el nivel con mayor descenso promedio (≈ <strong>-0.378</strong>).</li>
 <li><strong><code>relationship = Own-child</code></strong> también baja bastante el puntaje.</li>
@@ -14664,19 +14700,19 @@ Se ve clarito que <strong><code>marital-status</code></strong> es la señal domi
 </ul>
 <p><strong>Cómo encaja con las formas de las variables numéricas.</strong></p>
 <ul>
-<li><strong><code>capital-gain</code> / <code>capital-loss</code></strong> están <strong>cero-infladas</strong>: casi todo es <strong>0</strong> y pocos valores son grandes. Por eso el <strong>promedio</strong> sale negativo; aun así, cuando hay una ganancia real, el efecto individual suele <strong>empujar fuerte hacia arriba</strong>.</li>
-<li><strong><code>hours-per-week</code></strong> se apila alrededor de <strong>40</strong>; pequeñas variaciones ahí aportan poca señal y el promedio queda un poco hacia abajo si no viene con otras “pruebas” a favor.</li>
-<li><strong><code>education-num</code></strong> es <strong>ordinal</strong> (saltos discretos entre 8–13). Tratarla como continua puede diluir el valor de los niveles altos si son minoritarios junto con otras variables pro-<code>&gt; 50K</code>.</li>
-<li><strong><code>fnlwgt</code></strong> es peso muestral; meterlo como predictor mezcla un poco el <strong>diseño del survey</strong> con el fenómeno. Su efecto medio es pequeño, pero conviene tenerlo presente si se piensa generalizar.</li>
+<li><strong><code>capital-gain</code> / <code>capital-loss</code></strong> están <strong>cero-infladas</strong>, donde casi todo es <strong>0</strong> y pocos valores son grandes. Por eso el <strong>promedio</strong> sale negativo y, aun así, cuando hay una ganancia real, el efecto individual suele <strong>empujar fuerte hacia arriba</strong>.</li>
+<li><strong><code>hours-per-week</code></strong> se apila alrededor de <strong>40</strong>, con pequeñas variaciones que aportan poca señal y el promedio queda un poco hacia abajo si no viene con otras “pruebas” a favor.</li>
+<li><strong><code>education-num</code></strong> es <strong>ordinal</strong>. Tratarla como continua puede diluir el valor de los niveles altos si son minoritarios junto con otras variables pro-<code>&gt; 50K</code>.</li>
+<li><strong><code>fnlwgt</code></strong> es peso muestral. Meterlo como predictor mezcla un poco el <strong>diseño del survey</strong> con el fenómeno. Su efecto medio es pequeño, pero conviene tenerlo presente si se piensa generalizar.</li>
 </ul>
-<p><strong>Y todo esto, cruzado con las distribuciones y el desbalance.</strong>
-En los gráficos de categóricas se vio predominio de <strong>Male</strong>, <strong>White</strong>, <strong>United-States</strong>, <strong>Husband</strong>, <strong>Private</strong>, etc., y en la <strong>y</strong> la clase <strong>0</strong> domina (~3:1). Con ese contexto, el modelo “aprende” sobre todo el <strong>perfil mayoritario</strong>; por pura estadística, el <strong>promedio</strong> de contribuciones termina <strong>tirando a negativo</strong> para <code>&gt; 50K</code>. Las categorías raras (países u oficios con poca muestra) aportan señal <strong>inestable</strong>, así que sus promedios también suelen ir hacia abajo (no porque “no puedan” ser <code>&gt; 50K</code>, sino porque <strong>hay pocos ejemplos</strong> así en los datos).</p>
-<p><strong>Detalles que llaman la atención (y valen mención).</strong></p>
+<p><strong>Combinando con las distribuciones y el desbalance.</strong></p>
+<p>En los gráficos de categóricas se vio predominio de <strong>Male</strong>, <strong>White</strong>, <strong>United-States</strong>, <strong>Husband</strong>, <strong>Private</strong>, etc., y en la <strong>y</strong> la clase <strong>0</strong> domina (~3:1). Con esto, el modelo “aprende” sobre todo el <strong>perfil mayoritario</strong>, y el <strong>promedio</strong> de contribuciones termina <strong>tirando a negativo</strong> para <code>&gt; 50K</code>. Las categorías raras (países u oficios con poca muestra) aportan señal <strong>inestable</strong>, así que sus promedios también suelen ir hacia abajo, no porque “no puedan” ser <code>&gt; 50K</code>, sino porque <strong>hay pocos ejemplos</strong> así en los datos.</p>
+<p><strong>Detalles que llaman la atención.</strong></p>
 <ul>
-<li>Que <strong><code>Married-civ-spouse</code></strong> sea el mayor descenso promedio es, honestamente, <strong>sorprendente</strong> a primera vista. Probablemente refleja <strong>combinaciones</strong> con <em>relationship</em>, <em>sex</em>, <em>hours-per-week</em> y <em>occupation</em> que, en esta muestra, aparecen más con <code>&lt;= 50K</code>.</li>
-<li>Con <strong><code>Female</code></strong> más negativo que <strong><code>Male</code></strong>, no extraña si el <strong>recall</strong> o la <strong>precision</strong> por sexo muestran brechas: el puntaje ya parte un poco <strong>más abajo</strong> para ese grupo, a igualdad de lo demás.</li>
+<li>Que <strong><code>Married-civ-spouse</code></strong> sea el mayor descenso promedio es  <strong>inesperado</strong> a primera vista. Probablemente refleja <strong>combinaciones</strong> con <em>relationship</em>, <em>sex</em>, <em>hours-per-week</em> y <em>occupation</em> que, en esta muestra, aparecen más con <code>&lt;= 50K</code>.</li>
+<li>Con <strong><code>Female</code></strong> más negativo que <strong><code>Male</code></strong>, es normal el <strong>recall</strong> o la <strong>precision</strong> por sexo muestran brechas, ya que el puntaje parte un poco <strong>más abajo</strong> para ese grupo, a igualdad de lo demás.</li>
 <li>En <strong><code>capital-gain</code></strong>, aunque el promedio sea negativo por la masa en cero, <strong>un valor positivo real</strong> puede <strong>dar vuelta</strong> la predicción de un caso puntual.</li>
-<li>En <strong>edad</strong>, el efecto neto negativo sugiere que ciertos rangos —si no traen de la mano ocupaciones/educaciones bien pagadas— <strong>no</strong> se asocian con <code>&gt; 50K</code> en este dataset.</li>
+<li>En <strong>edad</strong>, el efecto neto negativo sugiere que ciertos rangos, si no traen de la mano ocupaciones/educaciones bien pagadas, <strong>no</strong> se asocian con <code>&gt; 50K</code> en este dataset.</li>
 </ul>
 </div>
 </div>
@@ -14692,12 +14728,12 @@ En los gráficos de categóricas se vio predominio de <strong>Male</strong>, <st
 <hr/>
 <h4 id="1)-Re-pesado-simple">1) Re-pesado simple<a class="anchor-link" href="#1)-Re-pesado-simple">¶</a></h4><ul>
 <li><strong>Qué:</strong> usar <code>sample_weight = fnlwgt</code> y ajustar el desbalance con <code>class_weight</code> o <code>scale_pos_weight ≈ N_neg / N_pos</code>.</li>
-<li><strong>Por qué:</strong> la clase <code>&gt;50K</code> es minoritaria y el dataset viene de un <em>survey</em>; el re-pesado corrige ambas cosas sin tocar <em>features</em>.</li>
+<li><strong>Por qué:</strong> la clase <code>&gt;50K</code> es minoritaria y el dataset viene de un <em>survey</em>, por lo que el re-pesado corrige ambas cosas sin tocar <em>features</em>.</li>
 <li><strong>Cómo:</strong> mantener el <em>pipeline</em> y pasar los pesos al <code>fit</code>. Reportar métricas <strong>por grupo</strong> antes/después.</li>
 <li><strong>Esperado:</strong> mayor <em>recall</em> de la clase 1 y menos dependencia del perfil mayoritario.</li>
 </ul>
 <hr/>
-<h4 id="2)-Post-proceso-%E2%80%9Cbarato%E2%80%9D:-umbrales-y-calibraci%C3%B3n-por-grupo">2) Post-proceso “barato”: umbrales y calibración <strong>por grupo</strong><a class="anchor-link" href="#2)-Post-proceso-%E2%80%9Cbarato%E2%80%9D:-umbrales-y-calibraci%C3%B3n-por-grupo">¶</a></h4><ul>
+<h4 id="2)-Post-proceso-%E2%80%9Cbarato%E2%80%9D,-con-umbrales-y-calibraci%C3%B3n-por-grupo">2) Post-proceso “barato”, con umbrales y calibración <strong>por grupo</strong><a class="anchor-link" href="#2)-Post-proceso-%E2%80%9Cbarato%E2%80%9D,-con-umbrales-y-calibraci%C3%B3n-por-grupo">¶</a></h4><ul>
 <li><strong>Qué:</strong> fijar <strong>umbrales por grupo</strong> (p. ej., igualar <em>recall</em> entre sexos/razas/edades) y <strong>calibrar</strong> las probabilidades por grupo (isotónica o Platt sobre validación).</li>
 <li><strong>Por qué:</strong> no requiere reentrenar y suele cerrar brechas rápido cuando el modelo ya ranquea bien (nuestro ROC/PR lo sugiere).</li>
 <li><strong>Cómo:</strong> con el set de validación, para cada grupo elegir el umbral que cumpla la meta (igualdad de <em>recall</em> o de <em>precision</em>). Guardar esos umbrales y las funciones de calibración y aplicarlos en inferencia.</li>
@@ -14713,7 +14749,7 @@ En los gráficos de categóricas se vio predominio de <strong>Male</strong>, <st
 </li>
 <li><p><strong>Por qué:</strong> evita relaciones contraintuitivas y reduce que el modelo “combine” <em>proxies</em> sensibles con todo lo demás.</p>
 </li>
-<li><p><strong>Cómo:</strong> definir <code>monotone_constraints</code> para numéricas y usar <code>interaction_constraints</code> para separar dummies sensibles del resto (manteniendo sus efectos lineales, sin cruces raros).</p>
+<li><p><strong>Cómo:</strong> definir <code>monotone_constraints</code> para numéricas y usar <code>interaction_constraints</code> para separar dummies sensibles del resto, manteniendo sus efectos lineales.</p>
 </li>
 <li><p><strong>Esperado:</strong> decisiones más estables y menos dependencia de combinaciones espurias.</p>
 </li>
@@ -14725,7 +14761,7 @@ En los gráficos de categóricas se vio predominio de <strong>Male</strong>, <st
 <li><strong>Trazabilidad:</strong> guardar umbrales por grupo, pesos usados y <em>seeds</em>; comparar <strong>antes vs. después</strong> en el mismo <em>split</em>.</li>
 </ul>
 <blockquote>
-<p>En corto: re-pesar para que el entrenamiento “escuche” a la minoría, ajustar y calibrar <strong>por grupo</strong> para decidir mejor, y poner <strong>constraints</strong> suaves en XGBoost para que el modelo no se vaya por atajos raros.</p>
+<p>En resumen, re-pesar para que el entrenamiento “escuche” a la minoría, ajustar y calibrar <strong>por grupo</strong> para decidir mejor, y poner <strong>constraints</strong> suaves en XGBoost para que el modelo no se vaya por atajos raros.</p>
 </blockquote>
 </div>
 </div>
@@ -14737,7 +14773,7 @@ En los gráficos de categóricas se vio predominio de <strong>Male</strong>, <st
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<h4 id="Celda-6.1-%C2%B7-Re-pesado:-utilidades-(scale_pos_weight-y-sample_weight)">Celda 6.1 · Re-pesado: utilidades (scale_pos_weight y sample_weight)<a class="anchor-link" href="#Celda-6.1-%C2%B7-Re-pesado:-utilidades-(scale_pos_weight-y-sample_weight)">¶</a></h4>
+<h4 id="Celda-6.1-%C2%B7-Utilidades-de-re-pesado">Celda 6.1 · Utilidades de re-pesado<a class="anchor-link" href="#Celda-6.1-%C2%B7-Utilidades-de-re-pesado">¶</a></h4>
 </div>
 </div>
 </div>
@@ -14777,7 +14813,7 @@ En los gráficos de categóricas se vio predominio de <strong>Male</strong>, <st
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<h4 id="Celda-6.2-%C2%B7-Constraints-para-XGBoost-(monotone-+-interaction)">Celda 6.2 · Constraints para XGBoost (monotone + interaction)<a class="anchor-link" href="#Celda-6.2-%C2%B7-Constraints-para-XGBoost-(monotone-+-interaction)">¶</a></h4>
+<h4 id="Celda-6.2-%C2%B7-Constraints-para-XGBoost">Celda 6.2 · Constraints para XGBoost<a class="anchor-link" href="#Celda-6.2-%C2%B7-Constraints-para-XGBoost">¶</a></h4>
 </div>
 </div>
 </div>
@@ -14854,7 +14890,7 @@ En los gráficos de categóricas se vio predominio de <strong>Male</strong>, <st
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<h4 id="Celda-6.3-%C2%B7-Entrenamiento-con-pesos-(train/val)-+-threshold-%C3%B3ptimo-por-F1">Celda 6.3 · Entrenamiento con pesos (train/val) + threshold óptimo por F1<a class="anchor-link" href="#Celda-6.3-%C2%B7-Entrenamiento-con-pesos-(train/val)-+-threshold-%C3%B3ptimo-por-F1">¶</a></h4>
+<h4 id="Celda-6.3-%C2%B7-Entrenamiento-con-pesos-y-threshold-%C3%B3ptimo-por-F1">Celda 6.3 · Entrenamiento con pesos y threshold óptimo por F1<a class="anchor-link" href="#Celda-6.3-%C2%B7-Entrenamiento-con-pesos-y-threshold-%C3%B3ptimo-por-F1">¶</a></h4>
 </div>
 </div>
 </div>
@@ -14934,7 +14970,7 @@ En los gráficos de categóricas se vio predominio de <strong>Male</strong>, <st
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<h4 id="Celda-6.4-%C2%B7-Post-proceso-barato:-calibraci%C3%B3n-por-grupo-(isot%C3%B3nica/Platt)">Celda 6.4 · Post-proceso barato: calibración por grupo (isotónica/Platt)<a class="anchor-link" href="#Celda-6.4-%C2%B7-Post-proceso-barato:-calibraci%C3%B3n-por-grupo-(isot%C3%B3nica/Platt)">¶</a></h4>
+<h4 id="Celda-6.4-%C2%B7-Post-proceso-barato-con-calibraci%C3%B3n-por-grupo-(isot%C3%B3nica)">Celda 6.4 · Post-proceso barato con calibración por grupo (isotónica)<a class="anchor-link" href="#Celda-6.4-%C2%B7-Post-proceso-barato-con-calibraci%C3%B3n-por-grupo-(isot%C3%B3nica)">¶</a></h4>
 </div>
 </div>
 </div>
@@ -14960,7 +14996,7 @@ En los gráficos de categóricas se vio predominio de <strong>Male</strong>, <st
     <span class="k">if</span> <span class="ow">not</span> <span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">groups</span><span class="p">)</span> <span class="o">==</span> <span class="nb">len</span><span class="p">(</span><span class="n">y_val</span><span class="p">)</span> <span class="o">==</span> <span class="nb">len</span><span class="p">(</span><span class="n">scores_val</span><span class="p">)):</span>
         <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s2">"Longitudes distintas entre grupos, y y scores."</span><span class="p">)</span>
 
-    <span class="k">for</span> <span class="n">g</span><span class="p">,</span> <span class="n">idx</span> <span class="ow">in</span> <span class="n">groups</span><span class="o">.</span><span class="n">groupby</span><span class="p">(</span><span class="n">groups</span><span class="p">)</span><span class="o">.</span><span class="n">groups</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>  <span class="c1"># idx ahora son posicionales</span>
+    <span class="k">for</span> <span class="n">g</span><span class="p">,</span> <span class="n">idx</span> <span class="ow">in</span> <span class="n">groups</span><span class="o">.</span><span class="n">groupby</span><span class="p">(</span><span class="n">groups</span><span class="p">)</span><span class="o">.</span><span class="n">groups</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>
         <span class="n">y_g</span> <span class="o">=</span> <span class="n">y_val</span><span class="p">[</span><span class="n">idx</span><span class="p">]</span>
         <span class="n">s_g</span> <span class="o">=</span> <span class="n">scores_val</span><span class="p">[</span><span class="n">idx</span><span class="p">]</span>
         <span class="k">if</span> <span class="n">method</span> <span class="o">==</span> <span class="s2">"isotonic"</span><span class="p">:</span>
@@ -15003,7 +15039,7 @@ En los gráficos de categóricas se vio predominio de <strong>Male</strong>, <st
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<h4 id="Celda-6.5-%C2%B7-Post-proceso-barato:-umbrales-por-grupo-(igualar-recall/precision)">Celda 6.5 · Post-proceso barato: umbrales por grupo (igualar recall/precision)<a class="anchor-link" href="#Celda-6.5-%C2%B7-Post-proceso-barato:-umbrales-por-grupo-(igualar-recall/precision)">¶</a></h4>
+<h4 id="Celda-6.5-%C2%B7-Post-proceso-barato-con-umbrales-por-grupo-(igualar-recall-y-precision)">Celda 6.5 · Post-proceso barato con umbrales por grupo (igualar recall y precision)<a class="anchor-link" href="#Celda-6.5-%C2%B7-Post-proceso-barato-con-umbrales-por-grupo-(igualar-recall-y-precision)">¶</a></h4>
 </div>
 </div>
 </div>
@@ -15080,7 +15116,7 @@ En los gráficos de categóricas se vio predominio de <strong>Male</strong>, <st
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<h4 id="Celda-6.6-%C2%B7-Evaluaci%C3%B3n-agrupada-y-exporte-HTML-(se-agrega-secci%C3%B3n-compacta)">Celda 6.6 · Evaluación agrupada y exporte HTML (se agrega sección compacta)<a class="anchor-link" href="#Celda-6.6-%C2%B7-Evaluaci%C3%B3n-agrupada-y-exporte-HTML-(se-agrega-secci%C3%B3n-compacta)">¶</a></h4>
+<h4 id="Celda-6.6-%C2%B7-Evaluaci%C3%B3n-agrupada-y-exporte-HTML">Celda 6.6 · Evaluación agrupada y exporte HTML<a class="anchor-link" href="#Celda-6.6-%C2%B7-Evaluaci%C3%B3n-agrupada-y-exporte-HTML">¶</a></h4>
 </div>
 </div>
 </div>
@@ -15149,7 +15185,7 @@ En los gráficos de categóricas se vio predominio de <strong>Male</strong>, <st
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<h4 id="Celda-6.7-%C2%B7-Ejecuci%C3%B3n:-re-pesado-+-constraints-+-post-proceso-por-grupo">Celda 6.7 · Ejecución: re-pesado + constraints + post-proceso por grupo<a class="anchor-link" href="#Celda-6.7-%C2%B7-Ejecuci%C3%B3n:-re-pesado-+-constraints-+-post-proceso-por-grupo">¶</a></h4>
+<h4 id="Celda-6.7-%C2%B7-Ejecuci%C3%B3n-con-re-pesado,-constraints-y-post-proceso-por-grupo">Celda 6.7 · Ejecución con re-pesado, constraints y post-proceso por grupo<a class="anchor-link" href="#Celda-6.7-%C2%B7-Ejecuci%C3%B3n-con-re-pesado,-constraints-y-post-proceso-por-grupo">¶</a></h4>
 </div>
 </div>
 </div>
@@ -15183,7 +15219,7 @@ En los gráficos de categóricas se vio predominio de <strong>Male</strong>, <st
 <span class="k">try</span><span class="p">:</span>
     <span class="n">pipe</span><span class="o">.</span><span class="n">set_params</span><span class="p">(</span><span class="n">pre__cat__onehot__sparse_output</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
 <span class="k">except</span> <span class="ne">ValueError</span><span class="p">:</span>
-    <span class="n">pipe</span><span class="o">.</span><span class="n">set_params</span><span class="p">(</span><span class="n">pre__cat__onehot__sparse</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>  <span class="c1"># scikit-learn &lt; 1.2</span>
+    <span class="n">pipe</span><span class="o">.</span><span class="n">set_params</span><span class="p">(</span><span class="n">pre__cat__onehot__sparse</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
 
 <span class="c1"># 3) Asegurar salida pandas con nombres</span>
 <span class="n">pre</span><span class="p">:</span> <span class="n">ColumnTransformer</span> <span class="o">=</span> <span class="n">pipe</span><span class="o">.</span><span class="n">named_steps</span><span class="p">[</span><span class="s2">"pre"</span><span class="p">]</span>
@@ -15196,7 +15232,7 @@ En los gráficos de categóricas se vio predominio de <strong>Male</strong>, <st
 <span class="n">clf</span><span class="p">:</span> <span class="n">XGBClassifier</span> <span class="o">=</span> <span class="n">pipe</span><span class="o">.</span><span class="n">named_steps</span><span class="p">[</span><span class="s2">"clf"</span><span class="p">]</span>
 <span class="n">apply_constraints_to_clf</span><span class="p">(</span><span class="n">clf</span><span class="p">,</span> <span class="n">pre</span><span class="p">,</span> <span class="n">monotone_map</span><span class="p">,</span> <span class="n">sensitive_cols</span><span class="p">)</span>
 
-<span class="c1"># 4) Entrenar con pesos (early stopping ya en constructor) y sin logs por iteración</span>
+<span class="c1"># 4) Entrenar con pesos</span>
 <span class="n">pipe</span><span class="p">,</span> <span class="n">val_metrics_w</span><span class="p">,</span> <span class="n">best_thr_w</span> <span class="o">=</span> <span class="n">train_and_validate_weighted</span><span class="p">(</span>
     <span class="n">pipe</span><span class="p">,</span> <span class="n">X_train</span><span class="p">,</span> <span class="n">y_train</span><span class="p">,</span> <span class="n">w_train</span><span class="p">,</span>
           <span class="n">X_val</span><span class="p">,</span>   <span class="n">y_val</span><span class="p">,</span>   <span class="n">w_val</span><span class="p">,</span>
@@ -15225,7 +15261,7 @@ En los gráficos de categóricas se vio predominio de <strong>Male</strong>, <st
     <span class="n">target_value</span><span class="o">=</span><span class="kc">None</span>
 <span class="p">)</span>
 
-<span class="c1"># 8) Evaluación en TEST (antes) + exporte HTML (esta sección ya incluye SHAP-like)</span>
+<span class="c1"># 8) Evaluación en TEST (antes) + exporte HTML</span>
 <span class="n">before_metrics</span> <span class="o">=</span> <span class="n">evaluate_on_test_with_html</span><span class="p">(</span>
     <span class="n">pipe</span><span class="p">,</span> <span class="n">X_test</span><span class="p">,</span> <span class="n">y_test</span><span class="p">,</span>
     <span class="n">model_name</span><span class="o">=</span><span class="sa">f</span><span class="s2">"XGB · re-pesado + constraints (base thr=</span><span class="si">{</span><span class="n">best_thr_w</span><span class="si">:</span><span class="s2">.3f</span><span class="si">}</span><span class="s2">)"</span><span class="p">,</span>
@@ -15277,7 +15313,7 @@ En los gráficos de categóricas se vio predominio de <strong>Male</strong>, <st
     <span class="n">per_group_df</span><span class="o">=</span><span class="n">per_group_df</span>
 <span class="p">)</span>
 
-<span class="c1"># 8.3 SHAP-like adicional (mismo modelo, sobre X_test): inserta una tarjeta con 3 gráficos</span>
+<span class="c1"># 8.3 SHAP-like adicional</span>
 <span class="n">_shap</span> <span class="o">=</span> <span class="n">_shap_like_for_html</span><span class="p">(</span><span class="n">pipe</span><span class="p">,</span> <span class="n">X_test</span><span class="p">,</span> <span class="n">top_k_features</span><span class="o">=</span><span class="mi">20</span><span class="p">,</span> <span class="n">top_k_levels</span><span class="o">=</span><span class="mi">20</span><span class="p">)</span>
 <span class="k">if</span> <span class="n">_shap</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
     <span class="n">b64_mag</span><span class="p">,</span> <span class="n">b64_sign</span><span class="p">,</span> <span class="n">b64_levels</span><span class="p">,</span> <span class="n">_topF_df</span><span class="p">,</span> <span class="n">_topL_df</span> <span class="o">=</span> <span class="n">_shap</span>
@@ -15338,17 +15374,31 @@ En los gráficos de categóricas se vio predominio de <strong>Male</strong>, <st
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<h3 id="Opiniones-y-conclusiones">Opiniones y conclusiones<a class="anchor-link" href="#Opiniones-y-conclusiones">¶</a></h3><p>Un buen promedio <strong>no alcanza</strong>: el modelo puede verse bien globalmente y <strong>fallar distinto</strong> según sexo, edad, raza o país. Los datos <strong>no son neutrales</strong>; lo que falta o sobra en el dataset se refleja en las decisiones del modelo. Ojo con eso.</p>
-<p><strong>Uso responsable, en directo:</strong></p>
+<h3 id="Opiniones-y-conclusiones">Opiniones y conclusiones<a class="anchor-link" href="#Opiniones-y-conclusiones">¶</a></h3><p>Un buen promedio <strong>no es suficiente</strong>, ya que el modelo puede verse bien globalmente y <strong>fallar distinto</strong> según sexo, edad, raza o país. Los datos <strong>no son neutrales</strong> porque faltas o sobras en el dataset se reflejan en las decisiones del modelo.</p>
+<p><strong>Uso responsable:</strong></p>
 <ul>
 <li><strong>Medir por grupo</strong> siempre (recall, precision, calibración). Si no se ve, no se arregla.</li>
-<li><strong>Umbrales = decisión de política</strong>, no solo técnica. Definir qué priorizar (sensibilidad vs. precisión, igualdad de oportunidad, etc.) y decirlo claramente.</li>
-<li><strong>Mitigaciones prácticas primero:</strong> re-pesar (clase y <code>fnlwgt</code>), <strong>calibrar y ajustar umbrales por grupo</strong>, y <strong>constraints</strong> suaves en XGBoost. Suman sin romper el <em>pipeline</em>.</li>
+<li><strong>Umbrales = decisión de política</strong>, no solo técnica. Definir qué priorizar y decirlo claramente.</li>
+<li>Realizar <strong>mitigaciones prácticas primero</strong>, donde es necesario re-pesar (clase y <code>fnlwgt</code>), <strong>calibrar y ajustar umbrales por grupo</strong>, y <strong>constraints</strong> suaves en XGBoost.</li>
 <li><strong>Explicabilidad para auditar</strong>, no para “probar” causas. Sirve para detectar patrones raros y sostener decisiones.</li>
 <li><strong>Monitoreo continuo</strong> en producción, con alertas y trazabilidad. Derecho a revisión humana en casos límite.</li>
-<li><strong>Contexto importa:</strong> a mayor impacto, mayor exigencia (controles, límites y evidencia de desempeño estable).</li>
+<li>El <strong>contexto importa</strong>, ya que, a mayor impacto, mayor exigencia.</li>
 </ul>
-<p><strong>En resumen:</strong> transparencia, métricas por grupo, ajustes explícitos y seguimiento. Que el buen promedio <strong>no tape a las personas</strong>.</p>
+<p><strong>En resumen:</strong> transparencia, métricas por grupo, ajustes explícitos y seguimiento. Además, que el buen promedio <strong>no tape a las personas</strong>.</p>
+</div>
+</div>
+</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In [ ]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+<div class="cm-editor cm-s-jupyter">
+<div class="highlight hl-python"><pre><span></span> 
+</pre></div>
+</div>
 </div>
 </div>
 </div>
